@@ -22,6 +22,10 @@ app.use(express.static('public'));
 // init the data store
 db.defaults({ users: []}).write();
 
+app.get('/', function(req, res) => {
+    res.send('go to /data')
+})
+
 // return all users
 app.get('/data', function(req, res){     
     res.send(db.get('users').value());
