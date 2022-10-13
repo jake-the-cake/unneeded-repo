@@ -22,7 +22,7 @@ app.use(express.static('public'));
 // init the data store
 db.defaults({ users: []}).write();
 
-app.get('/', function(req, res) => {
+app.get('/', (req, res) => {
     res.send('go to /data')
 })
 
