@@ -78,7 +78,7 @@ app.post('accounts', (req, res) => {
           };
             db.get('users').push(user).write();
     console.log(db.get('users').value());
-    res.send(db.get('users').value());
+    res.send({ added: user });
 
 })
 
