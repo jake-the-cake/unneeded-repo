@@ -30,7 +30,7 @@ app.get('/accounts', (req, res) => {
     res.send( data )
 })
 
-app.post('accounts', (req, res) => {
+app.post('/accounts', (req, res) => {
     // setup
           const firstName = faker.name.firstName();
           const lastName = faker.name.lastName();
